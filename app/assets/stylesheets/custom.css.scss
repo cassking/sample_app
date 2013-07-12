@@ -1,4 +1,26 @@
 @import "bootstrap";
+/* mixins, variables, etc. */
+
+$grayLight: #999;
+$orange:  #eaa52a;
+$grayMedium: #eaeaea;
+$darkGray: #555;
+$realDarkGray: #222;
+h2{
+
+
+
+color: $grayLight;
+
+
+
+
+}
+footer {
+
+color: $grayLight;
+
+}
 
 /* universal */
 html {
@@ -43,7 +65,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #999;
+
 }
 
 p {
@@ -56,45 +78,43 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #eaa52a;
+  color: $orange;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-}
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+    &:hover {
+    color: #fff;
+    text-decoration: none;
+    }
 }
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
+  border-top: 1px solid $grayMedium;
+
+   a {
+      color: $darkGray;
+        &:hover {
+    color: $realDarkGray;
+        }
+  }
+    small {
+    float: left;
+    }
+
+      ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+    
 }
 
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
-}
