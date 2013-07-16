@@ -60,11 +60,10 @@ describe "Static pages" do
     click_link "Contact"
     page.should have_selector 'title', text: full_title('Contact Us')
     click_link "Home"
-    page.should have_selector 'title', text: full_title('Home')
     click_link "Sign up now!"
-    page.should have_selector 'title', text: full_title('Home')
+    page.should have_selector 'title', text: full_title('Sign Up')
     click_link "sample app"
-    page.should have_selector 'title', text: full_title('Home')
+    page.should have_selector 'h1', text: 'Sample App'
   end
 
 
